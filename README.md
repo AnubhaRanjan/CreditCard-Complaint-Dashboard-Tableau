@@ -376,7 +376,7 @@ Parameter to switch between sheets
 
 **Professional Links**:
 - 📧 Email: ranjan.anubha@gmail.com
-- 💼 LinkedIn:linkedin.com/anubharanjan/
+- 💼 LinkedIn: linkedin.com/anubharanjan/
 
 ---
 
