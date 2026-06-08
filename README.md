@@ -110,7 +110,7 @@ A **Tableau-based analytical dashboard** that consolidates complaint data into a
 | Component | Tool | Purpose |
 |-----------|------|---------|
 | **Visualization** | Tableau Desktop | Interactive dashboarding & analytics |
-| **Data Source** | CSV |
+| **Data Source** | Excel |
 | **Calculations** | Tableau Calculated Fields | KPI metrics, rolling averages, percentages |
 | **Interactivity** | Tableau Filters & Parameters | User-driven exploration |
 
@@ -212,7 +212,7 @@ A **Tableau-based analytical dashboard** that consolidates complaint data into a
 
 ### ETL Pipeline (Summarized)
 ```
-Raw Data (CSV)
+Raw Data (Excel)
     ↓
 [Data Cleaning]
   - Remove duplicates
@@ -373,6 +373,9 @@ Parameter to switch between sheets
 4. Share URL with stakeholders for real-time access
 
 ---
+
+Dashboard Link:
+https://public.tableau.com/app/profile/anubha.ranjan/viz/CreditCardComplainDashboard_17808451062660/Dashboard1?publish=yes
 
 **Professional Links**:
 - 📧 Email: ranjan.anubha@gmail.com
