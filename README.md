@@ -1,5 +1,4 @@
-# CreditCard-Complaint-Dashboard-Tableau
-## Credit Card Complaint Analytics Dashboard
+# Credit Card Complaint Analytics Dashboard
 
 > A comprehensive Tableau dashboard that transforms raw complaint data into actionable business intelligence for a major financial institution. Provides real-time visibility into complaint patterns, geographic distribution, and operational metrics across 50+ US states.
 
