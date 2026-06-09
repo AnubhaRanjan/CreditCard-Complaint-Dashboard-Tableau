@@ -1,25 +1,26 @@
 # CreditCard-Complaint-Dashboard-Tableau
-# Credit Card Complaint Analytics Dashboard
+## Credit Card Complaint Analytics Dashboard
 
 > A comprehensive Tableau dashboard that transforms raw complaint data into actionable business intelligence for a major financial institution. Provides real-time visibility into complaint patterns, geographic distribution, and operational metrics across 50+ US states.
 
 ## Table of Contents
-- [Problem Statement]
-- [Solution Overview]
-- [Key Features]
-- [Technical Stack]
-- [Dashboard Components]
-- [How to Use]
-- [Key Insights & Metrics]
-- [Data Preparation]
-- [Improvements & Roadmap]
-- [Project Structure]
-- [Contact & Attribution]
+- [Problem Statement](#problem-statement)
+- [Solution Overview](#solution-overview)
+- [Key Features](#key-features)
+- [Technical Stack](#technical-stack)
+- [Dashboard Components](#dashboard-components)
+- [How to Use](#how-to-use)
+- [Key Insights & Metrics](#key-insights--metrics)
+- [Data Preparation](#data-preparation)
+- [Improvements & Roadmap](#improvements--roadmap)
+- [Data Dictionary](#data-dictionary)
+- [Getting Started](#getting-started)
+- [Contact & Attribution](#contact--attribution)
 
 ## Problem Statement
 
 ### Business Challenge
-A major financial services organization processes **86,893 credit card complaints ** across all 50 US states and multiple submission channels (web, phone, email, postal, fax, referral). However, stakeholders lacked unified visibility into:
+A major financial services organization processes **86,893 credit card complaints** across all 50 US states and multiple submission channels (web, phone, email, postal, fax, referral). However, stakeholders lacked unified visibility into:
 
 - **Geographic concentration** – Which states/regions drive the highest complaint volume?
 - **Root cause analysis** – What are the top complaint categories, and how do they trend over time?
@@ -63,10 +64,10 @@ A **Tableau-based analytical dashboard** that consolidates complaint data into a
 - **Chart Type**: Area chart with trend line overlay
 - **Time Range**: 2015–2021 (6+ years of historical data)
 - **Key Insight**: Peak complaint volume in 2020 (~2,175 monthly average), with gradual decline through 2021
-- **Calculation**: Dynamic 12-month rolling average for trend smoothing
+- **Trend**: Can be changed to see yearly, monthly, weekly and daily trend.
 - **Business Use**: Identify seasonal patterns and validate process improvements
 
-### 3. **Geographic Density Map**
+### 3. **Geographic Density/filled map Map**
 - **Coverage**: All 50 US states with complaint count overlay
 - **Color Gradient**: Light (low complaint volume) → Dark brown/red (high concentration)
 - **Top Complaint States**:
@@ -151,7 +152,6 @@ A **Tableau-based analytical dashboard** that consolidates complaint data into a
 - **Density Map**: Tan (light) → Brown/Red (dark)
 - **Bar Charts**: Red gradient (emphasis on high-impact categories)
 - **Day-of-Week**: Blue/teal heatmap with intensity gradient
-- **Pie Chart (Channels)**: Multi-color categorical palette
 
 ---
 
@@ -232,7 +232,7 @@ Raw Data (Excel)
   - Channel distribution analysis
     ↓
 [Tableau Data Source]
-  - Connect to xtract data
+  - Connect to extract data
   - Build calculated fields for KPIs
   - Configure dashboard
 ```
@@ -240,21 +240,24 @@ Raw Data (Excel)
 ### Key Calculated Fields (Tableau)
 ```
 Rolling 12-Month Complaints: 
-1. Calculated Field - Max Date Received ( to Capture last date month)
+1. Calculated Field - Max Date Received (to capture last date month)
 2. Parameter - Max date Received - This is linked with Max Date Received calculated field.
 3. Calculated Field - Rolling 12 month filter - 
 datediff('month',DATETRUNC('month',[Date received]),
 DATETRUNC('month',[Parameters].[Max Date Received])) <12
-4. Calculated Field - Rolling 12 months Compliants -Sum(if [Rolling 12 months Filter]= TRUE then [Number of Records] end)
+4. Calculated Field - Rolling 12 months Complaints -
+Sum(if [Rolling 12 months Filter]= TRUE then [Number of Records] end)
 
 Timely Response %: 
-Calculated Field - Timely Response - To check if [Timely response?]='Yes' then ([Number of Records]) END
+Calculated Field - Timely Response - 
+To check if [Timely response?]='Yes' then ([Number of Records]) END
 
 In Progress %: 
-Calculated Field -  In Progress Count- sum(if ([Company response to consumer]='In progress') then [Number of Records]end )
+Calculated Field - In Progress Count- 
+sum(if ([Company response to consumer]='In progress') then [Number of Records] end)
 
 Find the trend
-Parameter - Trend to put day duration like yearly,monthly, daily, quarterly
+Parameter - Trend to put day duration like yearly, monthly, daily, quarterly
 Calculated Field - Trend Dynamic Calc
 
 Density Map and filled Map
@@ -321,6 +324,7 @@ Parameter to switch between sheets
   - **Impact**: Real-time notification for operations teams
 
 ---
+
 ## Data Dictionary
 
 | Field | Type | Description | Example |
@@ -355,10 +359,10 @@ Parameter to switch between sheets
 
 2. **Open in Tableau**
    - Launch Tableau Desktop
-   - File → Open → Select `DASHBOARD.twbx`
+   - File → Open → Select `Dashboard.twbx`
 
 3. **Connect Data Source** (if prompted)
-   - Navigate to `data/processed/Credit Card Dashboard Dataset.csv`
+   - Navigate to `data/Credit_Card_Complaints.csv`
    - Click "Connect" and refresh data source
 
 4. **Explore the Dashboard**
@@ -374,12 +378,17 @@ Parameter to switch between sheets
 
 ---
 
-Dashboard Link:
-https://public.tableau.com/app/profile/anubha.ranjan/viz/CreditCardComplainDashboard_17808451062660/Dashboard1?publish=yes
+## Dashboard Link
+
+**Live Dashboard**: [Credit Card Complaint Dashboard](https://public.tableau.com/app/profile/anubha.ranjan/viz/CreditCardComplainDashboard_17808451062660/Dashboard1?publish=yes)
+
+---
+
+## Contact & Attribution
 
 **Professional Links**:
 - 📧 Email: ranjan.anubha@gmail.com
-- 💼 LinkedIn: linkedin.com/anubharanjan/
+- 💼 LinkedIn: [linkedin.com/in/anubharanjan](https://linkedin.com/in/anubharanjan)
 
 ---
 
@@ -388,7 +397,6 @@ https://public.tableau.com/app/profile/anubha.ranjan/viz/CreditCardComplainDashb
 This project is provided for **educational and portfolio purposes**. 
 
 ---
-
 
 **Last Updated**: June 2026  
 **Status**: Active (Phase 1 enhancements in progress)
